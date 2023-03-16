@@ -1,0 +1,68 @@
+{
+  "empleados": [
+    {
+      "id":1,
+      "ci": "8522523",
+      "nombres": "Troilos Cecilia",
+      "apellidos": "Lazar Patroklos",
+      "correo": "ravard0@globo.com",
+      "fechaNacimiento": "5/27/1961",
+      "direccion": "6570 Katie Pass",
+      "telefono": "(456) 6828520",
+      "vacuna": {
+        "tipo": "Sputnik",
+        "fecha": "Fecha vacuna1",
+        "numeroDosis": 2
+      }
+    },
+    {
+      "id":2,
+      "ci": "3711844",
+      "nombres": "Rajesh Reino",
+      "apellidos": "Fritjof Ali",
+      "correo": "fcockerton1@webnode.com",
+      "fechaNacimiento": "3/9/1958",
+      "direccion": "418 Mendota Drive",
+      "telefono": "(486) 9413585",
+      "vacuna": {
+        "tipo": "AstraZeneca",
+        "fecha": "Fecha vacuna2",
+        "numeroDosis": 3
+      }
+    },{
+      "id":3,
+      "ci": "5161979",
+      "nombres": "Zahra Dagrún",
+      "apellidos": "Zerah Cellachán",
+      "correo": "screed2@msn.com",
+      "fechaNacimiento": "11/16/1988",
+      "direccion": "96073 Raven Place",
+      "telefono": "(458) 3853322",
+      "vacuna": null
+    },{
+      "id":4,
+      "ci": "4535213",
+      "nombres": "Chiamaka Jaci",
+      "apellidos": "Ben Susanna",
+      "correo": "mfrankiewicz3@ibm.com",
+      "fechaNacimiento": "9/9/1959",
+      "direccion": "98571 Utah Avenue",
+      "telefono": "(891) 3121709",
+      "vacuna": {
+        "tipo": "Sputnik",
+        "fecha": "Fecha vacuna4",
+        "numeroDosis": 5
+      }
+    },{
+      "id":5,
+      "ci": "8517055",
+      "nombres": "Dante Asklepios",
+      "apellidos": "Åshild Batu",
+      "correo": "cgerler4@psu.edu",
+      "fechaNacimiento": "4/14/1980",
+      "direccion": "2 Luster Hill",
+      "telefono": "(527) 2932652",
+      "vacuna": null
+    }
+  ]
+}
