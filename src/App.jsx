@@ -1,9 +1,10 @@
 import './App.css'
+import { MenuPrincipalAdministradores } from './pages/MenuPrincipalAdministradores/MenuPrincipalAdministradores'
 
 function App() {
 
   return (
-    <h1>Inicio aplicacion</h1>
+    <MenuPrincipalAdministradores />
   )
 }
 
