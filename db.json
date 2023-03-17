@@ -1,21 +1,6 @@
 {
   "empleados": [
     {
-      "id": 1,
-      "ci": "8522523897",
-      "nombres": "Troilos Cecilia",
-      "apellidos": "Lazar Patroklos",
-      "correo": "ravard0@globo.com",
-      "fechaNacimiento": "5/27/1961",
-      "direccion": "6570 Katie Pass",
-      "telefono": "(456) 6828520",
-      "vacuna": {
-        "tipo": "Sputnik",
-        "fecha": "2022-1-19",
-        "numeroDosis": 2
-      }
-    },
-    {
       "id": 2,
       "ci": "3711844897",
       "nombres": "Rajesh Reino",
@@ -87,6 +72,20 @@
       "apellidos": "Cuenca vargas",
       "correo": "fernandocuva@gmail.com",
       "id": 8
+    },
+    {
+      "ci": "1564618919",
+      "nombres": "Mauricio",
+      "apellidos": "Vargas Lopez",
+      "correo": "algo@gmail.com",
+      "id": 9
+    },
+    {
+      "ci": "1234567891",
+      "nombres": "Facundo",
+      "apellidos": "Antezana Galzin",
+      "correo": "fernandocuva16@gmail.com",
+      "id": 10
     }
   ]
 }

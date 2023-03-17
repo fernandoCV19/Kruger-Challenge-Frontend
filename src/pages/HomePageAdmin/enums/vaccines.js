@@ -1,4 +1,4 @@
-export const vacunas = {
+export const vaccines = {
   sputnik: 'Sputnik',
   astra: 'AstraZeneca',
   pfizer: 'Pfizer',

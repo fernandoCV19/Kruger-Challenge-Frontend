@@ -7,18 +7,18 @@ export function PageProvider({ children }) {
   const [page, setPage] = useState('register');
   const [idEmployee, setIdEmployee] = useState(null);
 
-  const cambiarPagina = (nuevaPagina) => {
-    if (nuevaPagina === page) return;
-    setPage(nuevaPagina);
+  const changePage = (newPage) => {
+    if (newPage === page) return;
+    setPage(newPage);
   };
 
   return (
-    <PageContext.Provider value={{ page, idEmployee, cambiarPagina, setIdEmployee }}>
+    <PageContext.Provider value={{ page, idEmployee, changePage, setIdEmployee }}>
       {children}
     </PageContext.Provider>
   );
 }
 
 PageProvider.propTypes = {
-  children: PropTypes.func
+  children: PropTypes.any
 }

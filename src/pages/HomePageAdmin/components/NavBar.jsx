@@ -2,20 +2,20 @@ import { useContext } from 'react';
 import { PageContext } from '../context/PageContext';
 
 export function NavBar() {
-  const { cambiarPagina } = useContext(PageContext);
+  const { changePage } = useContext(PageContext);
 
   return (
     <nav>
       <button
         onClick={() => {
-          cambiarPagina('register');
+          changePage('register');
         }}
       >
         Registrar
       </button>
       <button
         onClick={() => {
-          cambiarPagina('view');
+          changePage('view');
         }}
       >
         Visualizar
