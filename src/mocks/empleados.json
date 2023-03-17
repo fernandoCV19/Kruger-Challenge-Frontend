@@ -1,0 +1,73 @@
+{
+  "resultado": [
+    {
+      "id":1,
+      "ci": "12345",
+      "mail": "mail1@gmail.com",
+      "nombres": "Nombre1",
+      "apellidos": "Apellidos1",
+      "correo": "Correo1",
+      "fechaNacimiento": "Fecha1",
+      "direccion": "Av. Resultado1",
+      "telefono": "1234567",
+      "vacuna": {
+        "tipo": "Sputnik",
+        "fecha": "Fecha vacuna1",
+        "numeroDosis": 2
+      }
+    },
+    {
+      "id":2,
+      "ci": "12345",
+      "mail": "mail2@gmail.com",
+      "nombres": "Nombre2",
+      "apellidos": "Apellidos2",
+      "correo": "Correo2",
+      "fechaNacimiento": "Fecha2",
+      "direccion": "Av. Resultado2",
+      "telefono": "1234567",
+      "vacuna": {
+        "tipo": "AstraZeneca",
+        "fecha": "Fecha vacuna2",
+        "numeroDosis": 3
+      }
+    },{
+      "id":3,
+      "ci": "12345",
+      "mail": "mail3@gmail.com",
+      "nombres": "Nombre3",
+      "apellidos": "Apellidos3",
+      "correo": "Correo3",
+      "fechaNacimiento": "Fecha3",
+      "direccion": "Av. Resultado3",
+      "telefono": "1234567",
+      "vacuna": null
+    },{
+      "id":4,
+      "ci": "12345",
+      "mail": "mail4@gmail.com",
+      "nombres": "Nombre4",
+      "apellidos": "Apellidos4",
+      "correo": "Correo4",
+      "fechaNacimiento": "Fecha4",
+      "direccion": "Av. Resultado4",
+      "telefono": "1234567",
+      "vacuna": {
+        "tipo": "Sputnik",
+        "fecha": "Fecha vacuna4",
+        "numeroDosis": 5
+      }
+    },{
+      "id":5,
+      "ci": "12345",
+      "mail": "mail5@gmail.com",
+      "nombres": "Nombre5",
+      "apellidos": "Apellidos5",
+      "correo": "Correo5",
+      "fechaNacimiento": "Fecha5",
+      "direccion": "Av. Resultado5",
+      "telefono": "1234567",
+      "vacuna": null
+    }
+  ]
+}
