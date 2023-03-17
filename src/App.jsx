@@ -1,11 +1,13 @@
-import './App.css'
-import { MenuPrincipalAdministradores } from './pages/MenuPrincipalAdministradores/MenuPrincipalAdministradores'
+import './App.css';
+import { PageProvider } from './pages/MenuPrincipalAdministradores/context/PageContext';
+import { MenuPrincipalAdministradores } from './pages/MenuPrincipalAdministradores/MenuPrincipalAdministradores';
 
 function App() {
-
   return (
-    <MenuPrincipalAdministradores />
-  )
+    <PageProvider>
+      <MenuPrincipalAdministradores />
+    </PageProvider>
+  );
 }
 
-export default App
+export default App;

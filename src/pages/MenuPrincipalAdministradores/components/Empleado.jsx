@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import { useContext } from 'react';
+import { PageContext } from '../context/PageContext';
 import { eliminarEmpleado as eliminar } from '../services/eliminarEmpleado';
 
 export function Empleado({
@@ -11,11 +13,19 @@ export function Empleado({
   vacuna,
   actualizarListaEmpleados,
 }) {
+
+  const {setIdEmployee, cambiarPagina} = useContext(PageContext);
+
   const eliminarEmpleado = async () => {
     await eliminar({ id });
     alert(`El usuario: ${nombres + ' ' + apellidos} ha sido eliminado`)
     await actualizarListaEmpleados({nuevaBusqueda: null});
   };
+
+  const editAndMoreInfoEmployee = () => {
+    setIdEmployee(id);
+    cambiarPagina('more-info-employee');
+  }
 
   return (
     <article>
@@ -34,8 +44,7 @@ export function Empleado({
         </p>
       </section>
       <footer>
-        <button>Mas informacion</button>
-        <button>Editar datos</button>
+        <button onClick={editAndMoreInfoEmployee}>Mas informacion</button>
         <button onClick={eliminarEmpleado}>Eliminar</button>
       </footer>
     </article>
