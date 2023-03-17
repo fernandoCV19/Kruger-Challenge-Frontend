@@ -11,7 +11,7 @@ export function ListaEmpleados({ listaEmpleados }) {
             nombres={empleado.nombres}
             apellidos={empleado.apellidos}
             ci={empleado.ci}
-            email={empleado.email}
+            email={empleado.correo}
             telefono={empleado.telefono}
             vacuna={empleado.vacuna}
           />
