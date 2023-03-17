@@ -24,7 +24,7 @@ export function VerEmpleados() {
         actualizarListaEmpleados={actualizarListaEmpleados}
         vacunado={variables.vacunado}
       />
-      <ListaEmpleados listaEmpleados={listaEmpleados} />
+      <ListaEmpleados listaEmpleados={listaEmpleados} actualizarListaEmpleados={actualizarListaEmpleados}/>
     </>
   );
 }

@@ -1,11 +1,18 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { obtenerEmpleados } from '../services/obtenerEmpleados';
 
 export function useEmpleados({ vacunado, tipo, rangoInicio, rangoFin }) {
   const [listaEmpleados, setListaEmpleados] = useState([]);
+  const ultimaBusqueda = useRef('');
 
   const actualizarListaEmpleados = async ({ nuevaBusqueda }) => {
-    const empleadosFormated = await obtenerEmpleados({ nombre: nuevaBusqueda });
+    let busquedaARealizar = nuevaBusqueda;
+    if(!nuevaBusqueda){
+      busquedaARealizar = ultimaBusqueda.current;
+    }
+
+    ultimaBusqueda.current = busquedaARealizar;
+    const empleadosFormated = await obtenerEmpleados({ nombre: busquedaARealizar });
     setListaEmpleados(empleadosFormated);
   };
 
