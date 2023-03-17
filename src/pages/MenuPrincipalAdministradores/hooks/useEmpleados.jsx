@@ -38,7 +38,7 @@ export function useEmpleados({ vacunado, tipo, rangoInicio, rangoFin }) {
   const listaEmpleadosFiltradaPorFecha = useMemo(() => {
     console.log();
     if (!rangoFin && !rangoInicio) {
-      return listaEmpleadosFiltradaPorVacunas;
+      return listaEmpleadosFiltradaPorTipoVacuna;
     }
 
     if (rangoInicio && !rangoFin) {

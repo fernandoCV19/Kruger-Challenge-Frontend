@@ -13,7 +13,6 @@ export function useFiltro() {
 
   const actualizarTipo = (event) => {
     const valor = event.target.value;
-
     setTipo(valor);
   };
 
