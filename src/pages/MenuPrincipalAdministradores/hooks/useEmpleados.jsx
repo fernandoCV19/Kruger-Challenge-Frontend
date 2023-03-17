@@ -4,40 +4,66 @@ import { obtenerEmpleados } from '../services/obtenerEmpleados';
 export function useEmpleados({ vacunado, tipo, rangoInicio, rangoFin }) {
   const [listaEmpleados, setListaEmpleados] = useState([]);
 
-  const actualizarListaEmpleados = ({ nuevaBusqueda }) => {
-    const empleadosFormated = obtenerEmpleados(nuevaBusqueda);
+  const actualizarListaEmpleados = async ({ nuevaBusqueda }) => {
+    const empleadosFormated = await obtenerEmpleados({ nombre: nuevaBusqueda });
     setListaEmpleados(empleadosFormated);
   };
 
   useEffect(() => {
-    const empleadosFormated = obtenerEmpleados('');
-    setListaEmpleados(empleadosFormated);
+    obtenerEmpleados({ nombre: '' }).then((empleadosFormateado) => {
+      setListaEmpleados(empleadosFormateado);
+    });
   }, []);
 
   const listaEmpleadosFiltradaPorVacunas = useMemo(() => {
-    return vacunado
-      ? [...listaEmpleados].filter((empleado) => empleado.vacuna)
-      : listaEmpleados;
-  }, [vacunado]);
+    if (vacunado === 'ambos') {
+      return listaEmpleados;
+    }
+
+    if (vacunado === 'vacunados') {
+      return [...listaEmpleados].filter((empleado) => empleado.vacuna);
+    }
+
+    return [...listaEmpleados].filter((empleado) => !empleado.vacuna);
+  }, [vacunado, listaEmpleados]);
 
   const listaEmpleadosFiltradaPorTipoVacuna = useMemo(() => {
-    return tipo
+    return tipo !== 'todos'
       ? [...listaEmpleadosFiltradaPorVacunas].filter(
           (empleado) => empleado.vacuna && empleado.vacuna.tipo === tipo
         )
-      : listaEmpleados;
-  }, [tipo]);
+      : listaEmpleadosFiltradaPorVacunas;
+  }, [vacunado, tipo, listaEmpleados]);
 
   const listaEmpleadosFiltradaPorFecha = useMemo(() => {
-    return rangoFin && rangoInicio
-      ? [...listaEmpleadosFiltradaPorTipoVacuna].filter(
-          (empleado) =>
-            empleado.vacuna &&
-            empleado.vacuna.fecha >= rangoInicio &&
-            empleado.vacuna.fecha <= rangoFin
-        )
-      : listaEmpleados;
-  }, [rangoFin, rangoInicio]);
+    console.log();
+    if (!rangoFin && !rangoInicio) {
+      return listaEmpleadosFiltradaPorVacunas;
+    }
+
+    if (rangoInicio && !rangoFin) {
+      return [...listaEmpleadosFiltradaPorTipoVacuna].filter(
+        (empleado) =>
+          empleado.vacuna &&
+          empleado.vacuna.fecha.getTime() >= rangoInicio.getTime()
+      );
+    }
+
+    if (!rangoInicio && rangoFin) {
+      return [...listaEmpleadosFiltradaPorTipoVacuna].filter(
+        (empleado) =>
+          empleado.vacuna &&
+          empleado.vacuna.fecha.getTime() <= rangoFin.getTime()
+      );
+    }
+
+    return [...listaEmpleadosFiltradaPorTipoVacuna].filter(
+      (empleado) =>
+        empleado.vacuna &&
+        empleado.vacuna.fecha.getTime() >= rangoInicio.getTime() &&
+        empleado.vacuna.fecha.getTime() <= rangoFin.getTime()
+    );
+  }, [vacunado, tipo, rangoFin, rangoInicio, listaEmpleados]);
 
   return {
     listaEmpleados: listaEmpleadosFiltradaPorFecha,

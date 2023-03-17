@@ -11,7 +11,7 @@
       "telefono": "(456) 6828520",
       "vacuna": {
         "tipo": "Sputnik",
-        "fecha": "Fecha vacuna1",
+        "fecha": "2022-1-19",
         "numeroDosis": 2
       }
     },
@@ -26,7 +26,7 @@
       "telefono": "(486) 9413585",
       "vacuna": {
         "tipo": "AstraZeneca",
-        "fecha": "Fecha vacuna2",
+        "fecha": "2022-5-3",
         "numeroDosis": 3
       }
     },{
@@ -50,7 +50,7 @@
       "telefono": "(891) 3121709",
       "vacuna": {
         "tipo": "Sputnik",
-        "fecha": "Fecha vacuna4",
+        "fecha": "2022-9-10",
         "numeroDosis": 5
       }
     },{

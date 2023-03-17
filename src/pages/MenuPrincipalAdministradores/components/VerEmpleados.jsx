@@ -4,13 +4,26 @@ import { Filtros } from './Filtros';
 import { ListaEmpleados } from './ListaEmpleados';
 
 export function VerEmpleados() {
-  const {variables, funciones} = useFiltro();
-  const {listaEmpleados, actualizarListaEmpleados} = useEmpleados(variables);
+  const {
+    variables,
+    actualizarVacunado,
+    actualizarTipo,
+    actualizarRangoInicio,
+    actualizarRangoFin,
+  } = useFiltro();
+  const { listaEmpleados, actualizarListaEmpleados } = useEmpleados(variables);
 
   return (
     <>
       <h3>Listado empleados</h3>
-      <Filtros funciones={funciones} actualizarListaEmpleados = {actualizarListaEmpleados}/>
+      <Filtros
+        actualizarVacunado={actualizarVacunado}
+        actualizarTipo={actualizarTipo}
+        actualizarRangoFin={actualizarRangoFin}
+        actualizarRangoInicio={actualizarRangoInicio}
+        actualizarListaEmpleados={actualizarListaEmpleados}
+        vacunado={variables.vacunado}
+      />
       <ListaEmpleados listaEmpleados={listaEmpleados} />
     </>
   );

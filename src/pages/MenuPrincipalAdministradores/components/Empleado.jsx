@@ -10,7 +10,7 @@ export function Empleado({id, nombres, apellidos, ci, email, telefono, vacuna}){
         <p>CI: {ci}</p>
         <p>Correo: {email}</p>
         <p>Telefono: {telefono}</p>
-        <p>Vacunado: {vacuna?'Vacunado':'No vacunado'}</p>
+        <p>Vacunado: {vacuna?`Vacunado - ${vacuna.tipo} - ${vacuna.fecha}`:'No vacunado'}</p>
       </section>
       <footer>
         <button>Mas informacion</button>

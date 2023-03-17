@@ -1,11 +1,12 @@
 export function mapeadorEmpleados(listaEmpleados){
-  return listaEmpleados.resultado.map((empleado) => {
+  return listaEmpleados.map((empleado) => {
     return {
       id: empleado.id,
       ci: empleado.ci,
       email: empleado.mail,
       nombres: empleado.nombres,
       apellidos: empleado.apellidos,
+      nombreCompleto: empleado.nombres + ' ' + empleado.apellidos,
       correo: empleado.correo,
       fechaNacimiento: empleado.fechaNacimiento,
       direccion: empleado.direccion,
@@ -13,7 +14,7 @@ export function mapeadorEmpleados(listaEmpleados){
       vacuna: empleado.vacuna
         ? {
             tipo: empleado.vacuna.tipo,
-            fecha: empleado.vacuna.fecha,
+            fecha: new Date(empleado.vacuna.fecha),
             numeroDosis: empleado.vacuna.numeroDosis,
           }
         : null,

@@ -1,66 +1,46 @@
 import { useState } from 'react';
 
 export function useFiltro() {
-  const [vacunado, setVacunado] = useState(null);
-  const [tipo, setTipo] = useState(null);
+  const [vacunado, setVacunado] = useState('ambos');
+  const [tipo, setTipo] = useState('todos');
   const [rangoInicio, setRangoInicio] = useState(null);
   const [rangoFin, setRangoFin] = useState(null);
 
-  const actualizarVacunado = (valor) => {
-    if (valor === 'ambos') {
-      setVacunado(null);
-      return;
-    }
-
-    if (valor === 'vacunado') {
-      setVacunado(true);
-      return;
-    }
-
-    setVacunado(false);
+  const actualizarVacunado = (event) => {
+    const nuevoValor = event.target.value;
+    setVacunado(nuevoValor);
   };
 
-  const actualizarTipo = (valor) => {
-    if (valor === tipo) return;
-
-    if (valor === 'todos') setTipo(null);
+  const actualizarTipo = (event) => {
+    const valor = event.target.value;
 
     setTipo(valor);
   };
 
-  const actualizarRangoInicio = (valor) => {
-    if (!valor) {
+  const actualizarRangoInicio = (event) => {
+    const valor = event.target.value;
+    if (valor === '') {
       setRangoInicio(null);
       return;
     }
-
-    if (rangoFin && rangoInicio > rangoFin) {
-      return;
-    }
-
-    setRangoInicio(rangoInicio);
+    setRangoInicio(new Date(valor));
   };
 
-  const actualizarRangoFin = (valor) => {
-    if (!valor) {
+  const actualizarRangoFin = (event) => {
+    const valor = event.target.value;
+    if (valor === '') {
       setRangoFin(null);
       return;
     }
 
-    if (rangoInicio && rangoInicio < rangoFin) {
-      return;
-    }
-
-    setRangoFin(rangoFin);
+    setRangoFin(new Date(valor));
   };
 
   return {
     variables: { vacunado, tipo, rangoInicio, rangoFin },
-    funciones: {
-      actualizarVacunado,
-      actualizarTipo,
-      actualizarRangoInicio,
-      actualizarRangoFin,
-    },
+    actualizarVacunado,
+    actualizarTipo,
+    actualizarRangoInicio,
+    actualizarRangoFin,
   };
 }
