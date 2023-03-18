@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 import PropTypes from 'prop-types';
-import { TOKEN_JWT } from '../pages/HomePageEmployee/data/TOKEN_JWT';
+import { TOKEN_JWT } from '../data/TOKEN_JWT';
 import jwtDecode from 'jwt-decode';
 
 export const AuthContext = createContext();
