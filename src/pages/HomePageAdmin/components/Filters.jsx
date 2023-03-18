@@ -15,19 +15,27 @@ export function Filters({
   });
 
   return (
-    <section>
+    <section className='w-full'>
       <form>
-        <label htmlFor='name'>Nombre empleado:</label>
+        <label htmlFor='name' className='text-l font-bold'>
+          Nombre empleado:
+        </label>
         <input
           id='name'
           type='search'
           onChange={handleChangeSearch}
           value={search}
-          
+          className='general-input-text w-1/2 m-2'
         />
 
-        <label htmlFor='vaccinated'>Vacunado</label>
-        <select id='vaccinated' onChange={updateVaccinated}>
+        <label htmlFor='vaccinated' className='text-l font-bold'>
+          Vacunado
+        </label>
+        <select
+          id='vaccinated'
+          onChange={updateVaccinated}
+          className='general-input-text w-1/6 m-2'
+        >
           <option value={'both'}>Ambos</option>
           <option value={'vaccinated'}>Vacunados</option>
           <option value={'without-vaccine'}>Sin vacuna</option>
@@ -35,8 +43,14 @@ export function Filters({
 
         {vaccinated === 'both' || vaccinated === 'vaccinated' ? (
           <>
-            <label htmlFor='type'>Tipo vacuna:</label>
-            <select id='type' onChange={updateType}>
+            <label htmlFor='type' className='text-l font-bold'>
+              Tipo vacuna:
+            </label>
+            <select
+              id='type'
+              onChange={updateType}
+              className='general-input-text w-1/6 m-2 inline-block'
+            >
               <option value={'all'}>Todas las vacunas</option>
               {Object.entries(vaccines).map(([vaccine, value]) => (
                 <option value={value} key={vaccine}>
@@ -45,12 +59,25 @@ export function Filters({
               ))}
             </select>
 
-            <h4>Rangos</h4>
-            <label htmlFor='startRange'>Rango inicio:</label>
-            <input id='startRange' type='date' onChange={updateStartRange} />
+            <label htmlFor='startRange' className='text-l font-bold'>
+              Rango inicio:
+            </label>
+            <input
+              id='startRange'
+              type='date'
+              onChange={updateStartRange}
+              className='general-input-text w-1/6 m-2 inline-block'
+            />
 
-            <label htmlFor='endRange'>Rango fin:</label>
-            <input id='endRange' type='date' onChange={updateEndRange} />
+            <label htmlFor='endRange' className='text-l font-bold'>
+              Rango fin:
+            </label>
+            <input
+              id='endRange'
+              type='date'
+              onChange={updateEndRange}
+              className='general-input-text w-1/6 m-2 inline-block'
+            />
           </>
         ) : null}
       </form>

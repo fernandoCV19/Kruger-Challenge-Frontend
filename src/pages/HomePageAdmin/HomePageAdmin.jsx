@@ -9,7 +9,7 @@ export function HomePageAdmin() {
   const { page, idEmployee } = useContext(PageContext);
 
   return (
-    <>
+    <div className='flex min-h-screen'>
       <NavBar />
 
       {page === 'register' ? (
@@ -19,6 +19,6 @@ export function HomePageAdmin() {
       ) : (
         <MoreInfoEmployee idEmployee={idEmployee} />
       )}
-    </>
+    </div>
   );
 }

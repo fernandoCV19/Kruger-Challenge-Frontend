@@ -10,43 +10,55 @@ export function EditableFields({
 }) {
   return (
     <>
-      <label htmlFor='ci'>Cedula de identidad:</label>
+      <label htmlFor='ci' className='text-l font-bold'>
+        Cedula de identidad:
+      </label>
       <input
         required
         id='ci'
         type='text'
         onChange={handleChangeCi}
         value={editableFields.ci}
+        className='general-input-text w-1/2 my-2'
       />
       {errors.ciError ? <p>{errors.ciError}</p> : null}
 
-      <label htmlFor='names'>Nombres:</label>
+      <label htmlFor='names' className='text-l font-bold'>
+        Nombres:
+      </label>
       <input
         required
         id='names'
         type='text'
         onChange={handleChangeNames}
         value={editableFields.names}
+        className='general-input-text w-1/2 my-2'
       />
       {errors.namesError ? <p>{errors.namesError}</p> : null}
 
-      <label htmlFor='lastNames'>Apellidos:</label>
+      <label htmlFor='lastNames' className='text-l font-bold'>
+        Apellidos:
+      </label>
       <input
         required
         id='lastNames'
         type='text'
         onChange={handleChangeLastNames}
         value={editableFields.lastNames}
+        className='general-input-text w-1/2 my-2'
       />
       {errors.lastNamesError ? <p>{errors.lastNamesError}</p> : null}
 
-      <label htmlFor='email'>Correo electronico:</label>
+      <label htmlFor='email' className='text-l font-bold'>
+        Correo electronico:
+      </label>
       <input
         required
         id='email'
         type='text'
         onChange={handleChangeEmail}
         value={editableFields.email}
+        className='general-input-text w-1/2 my-2'
       />
       {errors.emailError ? <p>{errors.emailError}</p> : null}
     </>
@@ -60,4 +72,4 @@ EditableFields.propTypes = {
   handleChangeNames: PropTypes.func,
   handleChangeLastNames: PropTypes.func,
   handleChangeEmail: PropTypes.func,
-}
+};

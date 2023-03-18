@@ -7,10 +7,10 @@ export function HomePageEmployee() {
   const { page } = useContext(PageContext);
 
   return (
-    <>
-      <NavBar />
+    <div className='flex min-h-screen'>
+      <NavBar/>
 
       {page === 'my-info' ? <EmployeeInfo /> : null}
-    </>
+    </div>
   );
 }

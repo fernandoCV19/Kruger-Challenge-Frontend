@@ -1,7 +1,7 @@
-import {  useEmployees } from '../hooks/useEmployees';
-import { useFilter} from '../hooks/useFilter';
+import { useEmployees } from '../hooks/useEmployees';
+import { useFilter } from '../hooks/useFilter';
 import { Filters } from './Filters';
-import { EmployeesList} from './EmployeesList';
+import { EmployeesList } from './EmployeesList';
 
 export function SeeEmployees() {
   const {
@@ -14,17 +14,22 @@ export function SeeEmployees() {
   const { employeesList, updateEmployeesList } = useEmployees(filterVariables);
 
   return (
-    <>
-      <h3>Listado empleados</h3>
-      <Filters 
-        updateVaccinated={updateVaccinated}
-        updateType={updateType}
-        updateStartRange={updateStartRange}
-        updateEndRange={updateEndRange}
-        vaccinated={filterVariables.vaccinated}
-        updateEmployeesList={updateEmployeesList}
-      />
-      <EmployeesList employeesList={employeesList} updateEmployeesList={updateEmployeesList}/>
-    </>
+    <div className='flex w-5/6 p-3'>
+      <div className='w-full'>
+        <h3 className='text-2xl font-bold my-2'>Listado empleados</h3>
+        <Filters
+          updateVaccinated={updateVaccinated}
+          updateType={updateType}
+          updateStartRange={updateStartRange}
+          updateEndRange={updateEndRange}
+          vaccinated={filterVariables.vaccinated}
+          updateEmployeesList={updateEmployeesList}
+        />
+        <EmployeesList
+          employeesList={employeesList}
+          updateEmployeesList={updateEmployeesList}
+        />
+      </div>
+    </div>
   );
 }

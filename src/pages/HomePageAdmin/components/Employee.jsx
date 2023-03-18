@@ -13,39 +13,42 @@ export function Employee({
   vaccine,
   updateEmployeesList,
 }) {
-
-  const {setIdEmployee, changePage} = useContext(PageContext);
+  const { setIdEmployee, changePage } = useContext(PageContext);
 
   const removeEmployee = async () => {
     await remove({ id });
-    alert(`El usuario: ${names + ' ' + lastNames} ha sido eliminado`)
-    await updateEmployeesList({newSearch: null});
+    alert(`El usuario: ${names + ' ' + lastNames} ha sido eliminado`);
+    await updateEmployeesList({ newSearch: null });
   };
 
   const editAndMoreInfoEmployee = () => {
     setIdEmployee(id);
     changePage('more-info-employee');
-  }
+  };
 
   return (
-    <article>
+    <article className='m-5 border border-black p-3 rounded-lg shadow-lg bg-gray-100'>
       <header>
-        <h4>{names + ' ' + lastNames}</h4>{' '}
+        <h4 className='text-l font-bold my-2'>{names + ' ' + lastNames}</h4>{' '}
       </header>
-      <section>
+      <section className='space-y-2 m-2'>
         <p>CI: {ci}</p>
         <p>Correo: {email}</p>
         <p>Telefono: {phone}</p>
         <p>
           Vacunado:{' '}
           {vaccine
-            ? `Vacunado - ${vaccine.type} - ${vaccine.date}`
+            ? `${vaccine.type} - ${vaccine.date} `
             : 'No vacunado'}
         </p>
       </section>
       <footer>
-        <button onClick={editAndMoreInfoEmployee}>Mas informacion</button>
-        <button onClick={removeEmployee}>Eliminar</button>
+        <button onClick={editAndMoreInfoEmployee} className='general-button m-2'>
+          Ver y editar informacion
+        </button>
+        <button onClick={removeEmployee} className='general-button m-2'>
+          Eliminar
+        </button>
       </footer>
     </article>
   );

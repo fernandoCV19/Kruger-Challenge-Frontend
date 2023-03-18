@@ -9,7 +9,6 @@ export function DisappearingFields({
 }) {
   return (
     <>
-      {' '}
       <label htmlFor='is-vaccinated'>Vacunado:</label>
       <input
         id='is-vaccinated'
@@ -18,9 +17,14 @@ export function DisappearingFields({
         onChange={handlerIsVaccinated}
       />
       {isVaccinated ? (
-        <div>
+        <div className=''>
           <label htmlFor='type'>Tipo vacuna:</label>
-          <select id='type' name='type' defaultValue={fields.vaccine?.type}>
+          <select
+            id='type'
+            name='type'
+            defaultValue={fields.vaccine?.type}
+            className='font-normal bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 w-1/6 mx-4'
+          >
             {Object.entries(vaccines).map(([vaccine, value]) => (
               <option value={value} key={vaccine}>
                 {value}
@@ -39,6 +43,7 @@ export function DisappearingFields({
                 : null
             }
             name='dateVaccine'
+            className='font-normal bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 w-1/6 mx-4'
           />
           <label htmlFor='dose'>Numero de dosis:</label>
           <input
@@ -46,6 +51,7 @@ export function DisappearingFields({
             type='number'
             defaultValue={fields.vaccine?.doseNumber}
             name='doseNumber'
+            className='font-normal bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 w-1/12 mx-4'
           />
         </div>
       ) : null}
@@ -56,5 +62,5 @@ export function DisappearingFields({
 DisappearingFields.propTypes = {
   fields: PropTypes.object,
   isVaccinated: PropTypes.any,
-  handlerIsVaccinated: PropTypes.func
-}
+  handlerIsVaccinated: PropTypes.func,
+};

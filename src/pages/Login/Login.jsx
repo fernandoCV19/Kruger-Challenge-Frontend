@@ -1,49 +1,42 @@
-import { useContext } from "react";
-import { useNavigate } from "react-router";
-import {AuthContext} from './../../context/AuthContext';
-import { roles } from "../../enums/roles";
+import { useLogin } from './hooks/useLogin';
 
 export function Login() {
-
-  const navigate = useNavigate();
-  const {login, getRole} = useContext(AuthContext);
-
-  const handlerSubmit = async (event) => {
-    event.preventDefault();
-    const {username, password} = Object.fromEntries(new window.FormData(event.target));
-    const res = await login({username, password});
-
-    console.log(res);
-
-    if(res){
-      const role = getRole();
-      if(role === roles.admin){
-        navigate('/homePageAdmin')
-        return;
-      }
-      navigate('/homePageEmployee');
-      return;
-    }
-
-    alert("Credenciales incorrectas")
-  }
+  const { handlerSubmit } = useLogin();
 
   return (
-    <>
-      <header>
-        <h2>Inventario de vacunacion de empleados</h2>
-      </header>
-      <main>
-        <form onSubmit={handlerSubmit}>
-          <label htmlFor="username" >Nombre usuario:</label>
-          <input id="username" type="text" name="username"/>
+    <div className='flex items-center justify-center min-h-screen bg-slate-400 font-bold'>
+      <main className='h-3/4 w-1/2 bg-white text-left border-solid rounded-lg p-10 drop-shadow-lg'>
+        <h2 className='block text-center text-3xl'>Iniciar sesion</h2>
 
-          <label htmlFor="password">Contraseña:</label>
-          <input id="password" type='password' name="password"/>
+        <form onSubmit={handlerSubmit} className=''>
+          <label htmlFor='username' className='block my-6'>
+            Nombre usuario:
+          </label>
+          <input
+            id='username'
+            type='text'
+            name='username'
+            className='general-input-text w-full my-6'
+          />
 
-          <button type="submit">Ingresar</button>
+          <label htmlFor='password' className='block my-6'>
+            Contraseña:
+          </label>
+          <input
+            id='password'
+            type='password'
+            name='password'
+            className='general-input-text w-full my-6'
+          />
+
+          <button
+            type='submit'
+            className='general-button w-full my-6 float-right'
+          >
+            Ingresar
+          </button>
         </form>
       </main>
-    </>
+    </div>
   );
 }

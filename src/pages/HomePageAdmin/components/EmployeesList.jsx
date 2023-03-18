@@ -3,7 +3,8 @@ import { Employee } from './Employee';
 
 export function EmployeesList({ employeesList, updateEmployeesList }) {
   return (
-    <main>
+    <main className='w-full'>
+      <h3 className='text-xl font-bold my-2'>Resultados</h3>
       <section>
         {employeesList.length > 0 ? (
           employeesList.map((employee) => (
