@@ -140,6 +140,7 @@ export function useFields({ id }) {
     const res = await updateEmployee({ employee: newData, id });
     setEditableFields(getEditableFields(res));
     setStaticFields(getStaticFields(res));
+    alert('Los datos del usuario han sido actualizados')
   };
 
   return {

@@ -78,6 +78,8 @@ export function useEmployeeInfo() {
       setFields(data);
       setIsVaccinated(!!data.vaccine);
     });
+
+    alert('Los datos han sido actualizados')
   };
 
   return { fields, isVaccinated, handlerIsVaccinated, updateInformation };

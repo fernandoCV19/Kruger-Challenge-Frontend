@@ -21,7 +21,7 @@ export function EmployeesList({ employeesList, updateEmployeesList }) {
             />
           ))
         ) : (
-          <p>No hay employees que concuerden con los filtros de busqueda</p>
+          <p>No hay empleados que concuerden con los filtros de busqueda</p>
         )}
       </section>
     </main>
