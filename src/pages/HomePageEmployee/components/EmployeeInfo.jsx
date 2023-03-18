@@ -7,16 +7,22 @@ export function EmployeeInfo() {
     useEmployeeInfo();
 
   return (
-    <main  className='flex w-5/6 p-3'>
-      <form onSubmit={updateInformation} className='w-full'>
-        <StaticFields fields={fields}/>
-        <DisappearingFields
-          fields={fields}
-          isVaccinated={isVaccinated}
-          handlerIsVaccinated={handlerIsVaccinated}
-        />
-        <button type='submit' className='general-button mt-3 block'>Actualizar</button>
-      </form>
+    <main className='flex w-5/6 p-3'>
+      <section>
+        <h3 className='text-xl font-bold my-2'>Mi informacion</h3>
+
+        <form onSubmit={updateInformation} className='w-full'>
+          <StaticFields fields={fields} />
+          <DisappearingFields
+            fields={fields}
+            isVaccinated={isVaccinated}
+            handlerIsVaccinated={handlerIsVaccinated}
+          />
+          <button type='submit' className='general-button mt-3 block'>
+            Actualizar
+          </button>
+        </form>
+      </section>
     </main>
   );
 }
