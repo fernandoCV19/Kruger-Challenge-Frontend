@@ -8,7 +8,7 @@ export function EmployeeInfo() {
 
   return (
     <main className='flex w-5/6 p-3'>
-      <section>
+      <section className='w-full'>
         <h3 className='text-xl font-bold my-2'>Mi informacion</h3>
 
         <form onSubmit={updateInformation} className='w-full'>

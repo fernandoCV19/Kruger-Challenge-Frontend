@@ -15,6 +15,7 @@ export function DisappearingFields({
         type='checkbox'
         checked={isVaccinated}
         onChange={handlerIsVaccinated}
+        className='general-checkbox m-2'
       />
       {isVaccinated ? (
         <div className=''>
