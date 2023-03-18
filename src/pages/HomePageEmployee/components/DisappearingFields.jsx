@@ -2,6 +2,10 @@ import { vaccines } from '../../HomePageAdmin/enums/vaccines';
 import { getCalendarFormatFromDate } from '../utils/getCalendarFormatFromDate';
 import PropTypes from 'prop-types';
 
+/**
+ * Component meant to be in the view and edit section of the employee. That component contains fields that can be disable on the screen.
+ */
+
 export function DisappearingFields({
   fields,
   isVaccinated,

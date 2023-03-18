@@ -1,5 +1,10 @@
 import { useLogin } from './hooks/useLogin';
 
+/**
+ * Component that is the login page.
+ */
+
+
 export function Login() {
   const { handlerSubmit } = useLogin();
 

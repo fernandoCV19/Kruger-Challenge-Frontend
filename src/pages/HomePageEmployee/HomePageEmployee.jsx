@@ -3,6 +3,11 @@ import { NavBar } from './components/NavBar';
 import { useContext } from 'react';
 import { PageContext } from './context/PageContext';
 
+/**
+ * Component that is the main page of the employee
+ */
+
+
 export function HomePageEmployee() {
   const { page } = useContext(PageContext);
 

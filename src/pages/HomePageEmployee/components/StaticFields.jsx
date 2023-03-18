@@ -1,6 +1,10 @@
 import { getCalendarFormatFromDate } from '../utils/getCalendarFormatFromDate';
 import PropTypes from 'prop-types';
 
+/**
+ * Fields that are non editable in the view and edit section of the employee
+ */
+
 export function StaticFields({ fields }) {
   return (
     <>

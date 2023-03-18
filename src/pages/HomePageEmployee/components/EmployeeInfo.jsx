@@ -2,6 +2,10 @@ import { useEmployeeInfo } from '../hooks/useEmployeeInfo';
 import { DisappearingFields } from './DisappearingFields';
 import { StaticFields } from './StaticFields';
 
+/**
+ * Component that show the information of the employee. That component contains fields that can be edited by the employee and some fields that only can be edited by the administrator
+ */
+
 export function EmployeeInfo() {
   const { fields, isVaccinated, handlerIsVaccinated, updateInformation } =
     useEmployeeInfo();
