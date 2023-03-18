@@ -14,6 +14,8 @@ Tenemos diversos comandos para ejecutar diferentes acciones con la aplicación:
 * `npm run apiserver`: El cual iniciara únicamente la fake api en la dirección: http://localhost:3000
 * `npx playwrigth test`: El cual ejecutara todos los test de la aplicación. Debemos ejecutar el comando `npm run all` previamente para que los test funcionen correctamente.
 
+En caso de que eliminemos todos los usuarios, o simplemente queremos todos los valores que venían por defecto en el proyecto, en el archivo db.json.copy tenemos todos estos datos. Solo debemos copiar el contenido de este archivo en el archivo db.json. No es necesario cerrar la aplicación para hacerlo, esta acción se puede realizar mientras la aplicación está siendo ejecutada.
+
 ## Dependencias utilizadas para el proyecto
 Se utilizaron las siguientes dependencias:
 * Vite
