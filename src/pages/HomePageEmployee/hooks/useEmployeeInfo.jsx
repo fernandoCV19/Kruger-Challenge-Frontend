@@ -3,6 +3,11 @@ import { AuthContext } from "../../../context/AuthContext";
 import { getInfo } from "../services/getInfo";
 import { updateEmployee } from "../../../services/updateEmployee";
 
+/**
+ * Hook that stores the fields available in the view and edit information section available to the employee. It also gives the functions to modify that values.
+ * @returns fields: fields available in the view and edit information section, isVaccinated: that indicates is the employee is vaccinated, handlerIsVaccinated: function to change the previous value, updateInformation: function to update the employee information on the api
+ */
+
 export function useEmployeeInfo() {
   const [id, setID] = useState('');
   const { getID } = useContext(AuthContext);
