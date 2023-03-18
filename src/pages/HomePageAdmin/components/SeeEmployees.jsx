@@ -3,6 +3,10 @@ import { useFilter } from '../hooks/useFilter';
 import { Filters } from './Filters';
 import { EmployeesList } from './EmployeesList';
 
+/*
+ * Component that displays all the employees registered at the application, and also gives filters that modify the employees listed in the component.
+ */
+
 export function SeeEmployees() {
   const {
     filterVariables,

@@ -1,3 +1,9 @@
+/**
+ * Function that maps the information that will be sent to the api
+ * @param employee: Object that contains the information that wil be sent
+ * @returns object: that contains the same information but with name fields that are compatible with the api
+ */
+
 export function employeeSendMapper({employee}){
   return {
     id: employee.id,

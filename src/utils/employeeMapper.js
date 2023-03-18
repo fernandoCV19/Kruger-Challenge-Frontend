@@ -1,3 +1,9 @@
+/**
+ * Function that maps the information send by the api.
+ * @param employee: Object that contains the information sent by the API
+ * @returns object: that contains the same information but with name fields that are compatible with the application
+ */
+
 export function employeeMapper(employee) {
     return {
       id: employee.id,

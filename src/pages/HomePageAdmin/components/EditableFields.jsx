@@ -1,5 +1,9 @@
 import PropTypes from 'prop-types';
 
+/*
+* Component that contains fields that are editable in the form that is available when the admin wants to see more information or modify it about an employee
+*/
+
 export function EditableFields({
   editableFields,
   errors,

@@ -2,6 +2,17 @@ import { useState } from 'react';
 import { verifyCI } from '../services/verifyCI';
 import { registerNewEmployee as register } from '../services/registerNewEmployee';
 
+/**
+ * Hook that store all the fields available in the registration of a new employee section. Also give the functions to modify that values
+ * @returns     fields: fields available in the registration section,
+    errors: errors when the admin put a invalid put value into the registration form,
+    handleChangeCi: function to change the ci,
+    handleChangeNames: function to change the names,
+    handleChangeLastNames: function to change the last names,
+    handleChangeEmail: function to change the email,
+    registerNewEmployee: function to register a new employee
+ */
+
 export function useRegister() {
   const [fields, setFields] = useState(
     JSON.parse(window.localStorage.getItem('register')) || {

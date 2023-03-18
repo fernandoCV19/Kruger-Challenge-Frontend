@@ -1,6 +1,10 @@
 import { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * Context that store the actual page that is shown in the application, and give a function that change the page.
+ */
+
 export const PageContext = createContext();
 
 export function PageProvider({ children }) {

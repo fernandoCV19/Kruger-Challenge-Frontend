@@ -3,6 +3,11 @@ import { useContext } from 'react';
 import { PageContext } from '../context/PageContext';
 import { removeEmployee as remove } from '../services/removeEmployee';
 
+/**
+ * Component that contains the main information about an employee, and give two options: see more information and remove it.
+ * Component used in the section when the admin are viewing all the employees in the application.
+ */
+
 export function Employee({
   id,
   names,
@@ -37,13 +42,14 @@ export function Employee({
         <p>Telefono: {phone}</p>
         <p>
           Vacunado:{' '}
-          {vaccine
-            ? `${vaccine.type} - ${vaccine.date} `
-            : 'No vacunado'}
+          {vaccine ? `${vaccine.type} - ${vaccine.date} ` : 'No vacunado'}
         </p>
       </section>
       <footer>
-        <button onClick={editAndMoreInfoEmployee} className='general-button m-2'>
+        <button
+          onClick={editAndMoreInfoEmployee}
+          className='general-button m-2'
+        >
           Ver y editar informacion
         </button>
         <button onClick={removeEmployee} className='general-button m-2'>

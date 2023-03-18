@@ -5,6 +5,10 @@ import { NavBar } from './components/NavBar';
 import { SeeEmployees } from './components/SeeEmployees';
 import { PageContext } from './context/PageContext';
 
+/**
+ * Component that is the main page of the admin
+ */
+
 export function HomePageAdmin() {
   const { page, idEmployee } = useContext(PageContext);
 

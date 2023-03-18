@@ -5,6 +5,19 @@ import { getEditableFields } from '../utils/getEditableFields';
 import { getStaticFields } from '../utils/getStaticFields';
 import { updateEmployee } from '../../../services/updateEmployee';
 
+/**
+ * Hook that store all fields, editable and non editable, in the more information about an employee section. This hook stores that fields and give functions that modify it. It also notifies is the new fields are correct.
+ * @param id: id of the employee that we want his information
+ * @returns editableFields: fields meant to be editable in the form,
+    @returns staticFields: fields meant to be static in the form,
+    @returns errors: errors that happened when the admin put an incorrect value,
+    @returns handleChangeCi: handler to change the ci value,
+    @returns handleChangeNames: handler to change the names value,
+    @returns handleChangeLastNames: handler to change the last names value,
+    @returns handleChangeEmail: handler to change the email value,
+    @returns updateFieldsEmployee: function that update the information of the employee in the api,
+ */
+
 export function useFields({ id }) {
   const [editableFields, setEditableFields] = useState({
     ci: '',
@@ -140,7 +153,7 @@ export function useFields({ id }) {
     const res = await updateEmployee({ employee: newData, id });
     setEditableFields(getEditableFields(res));
     setStaticFields(getStaticFields(res));
-    alert('Los datos del usuario han sido actualizados')
+    alert('Los datos del usuario han sido actualizados');
   };
 
   return {

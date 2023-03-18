@@ -1,5 +1,9 @@
 import { useRegister } from '../hooks/useRegister';
 
+/**
+ * Component meant to be used ad a form when the admin wants to register a new employee.
+ */
+
 export function EmployeeRegister() {
   const {
     fields,

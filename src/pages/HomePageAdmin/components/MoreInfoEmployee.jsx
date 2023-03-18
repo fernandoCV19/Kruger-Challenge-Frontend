@@ -3,6 +3,10 @@ import { useFields } from '../hooks/useFields';
 import { EditableFields } from './EditableFields';
 import { StaticFields } from './StaticFields';
 
+/*
+ *Component that displays all the information about an employee, and give the option to change some information. Also gives an button to update this information to the api.
+ */
+
 export function MoreInfoEmployee({ idEmployee }) {
   const {
     editableFields,
@@ -33,7 +37,9 @@ export function MoreInfoEmployee({ idEmployee }) {
 
           <StaticFields staticFields={staticFields} />
 
-          <button type='submit' className='general-button'>Actualizar informacion</button>
+          <button type='submit' className='general-button'>
+            Actualizar informacion
+          </button>
         </form>
       </div>
     </main>

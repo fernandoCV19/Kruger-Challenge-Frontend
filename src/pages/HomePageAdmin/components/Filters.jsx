@@ -2,6 +2,10 @@ import { vaccines } from '../enums/vaccines';
 import PropTypes from 'prop-types';
 import { useSearchByName } from '../hooks/useSearchByName';
 
+/**
+ * Component that contains the filters available in the search employees section.
+ */
+
 export function Filters({
   updateVaccinated,
   updateType,

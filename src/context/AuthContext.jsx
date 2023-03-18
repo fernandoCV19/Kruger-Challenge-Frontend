@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import jwtDecode from 'jwt-decode';
 import { login as lg} from '../services/login';
 
+/**
+ * Context that give access to the role and id stored in the token. Also, it has functions to login: that store the token if the user has the correct credentials, and logout: that remove the token.
+ */
+
 export const AuthContext = createContext();
 
 export function AuthProvider({ children }) {

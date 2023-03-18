@@ -1,3 +1,9 @@
+/**
+ * Function that maps the information send by the api.
+ * @param employeeList: Array that contains the information sent by the API
+ * @returns list: that contains the same information but with name fields that are compatible with the application
+ */
+
 export function employeesMapper(employeesList) {
   return employeesList.map((employee) => {
     return {

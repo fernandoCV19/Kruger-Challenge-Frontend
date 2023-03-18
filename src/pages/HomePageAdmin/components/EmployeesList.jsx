@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
 import { Employee } from './Employee';
 
+/*
+ * Component meant to be used to display a list with the employees that match the filters selected by the admin.
+ */
+
 export function EmployeesList({ employeesList, updateEmployeesList }) {
   return (
     <main className='w-full'>
