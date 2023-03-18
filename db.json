@@ -5,6 +5,12 @@
       "username": "admin1",
       "password": "12345678",
       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJyb2xlIjoiQWRtaW4ifQ.VXvtwN7KtFSOcdxK-JX6BIFiffg2SN3WNyBjdGtx3os"
+    },
+    {
+      "id": 2,
+      "username": "admin2",
+      "password": "12345678",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJyb2xlIjoiQWRtaW4ifQ.VXvtwN7KtFSOcdxK-JX6BIFiffg2SN3WNyBjdGtx3os"
     }
   ],
   "empleados": [
@@ -39,7 +45,10 @@
         "tipo": "AstraZeneca",
         "fecha": "2022-5-3",
         "numeroDosis": 3
-      }
+      },
+      "token": "'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJyb2xlIjoiRW1wbG95ZWUifQ.BlrzREfPVBJfUIJj7NIglkZfHdso-x7R3453wFVacrc'",
+      "username": "employee2",
+      "password": "12345678"
     },
     {
       "id": 3,
@@ -50,7 +59,10 @@
       "fechaNacimiento": "11/16/1988",
       "direccion": "96073 Raven Place",
       "telefono": "(458) 3853322",
-      "vacuna": null
+      "vacuna": null,
+      "token": "'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJyb2xlIjoiRW1wbG95ZWUifQ.BlrzREfPVBJfUIJj7NIglkZfHdso-x7R3453wFVacrc'",
+      "username": "employee3",
+      "password": "12345678"
     },
     {
       "id": 4,
