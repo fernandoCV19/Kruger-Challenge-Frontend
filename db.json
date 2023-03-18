@@ -1,19 +1,30 @@
 {
+  "administradores": [
+    {
+      "id": 1,
+      "username": "admin1",
+      "password": "12345678",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJyb2xlIjoiQWRtaW4ifQ.VXvtwN7KtFSOcdxK-JX6BIFiffg2SN3WNyBjdGtx3os"
+    }
+  ],
   "empleados": [
     {
+      "id": 1,
       "ci": "8522523897",
       "nombres": "Troilos Cecilia",
       "apellidos": "Lazar Patroklos",
       "correo": "ravard0@globo.com",
-      "fechaNacimiento": "1961-05-22",
+      "fechaNacimiento": "5/27/1961",
       "direccion": "6570 Katie Pass",
       "telefono": "(456) 6828520",
       "vacuna": {
-        "tipo": "Jhonson&Jhonson",
-        "fecha": "2023-02-28T00:00:00.000Z",
-        "numeroDosis": "5"
+        "tipo": "Sputnik",
+        "fecha": "2022-1-19",
+        "numeroDosis": 2
       },
-      "id": 1
+      "token": "'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJyb2xlIjoiRW1wbG95ZWUifQ.BlrzREfPVBJfUIJj7NIglkZfHdso-x7R3453wFVacrc'",
+      "username": "employee1",
+      "password": "12345678"
     },
     {
       "id": 2,

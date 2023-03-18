@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import { PageContext } from '../context/PageContext';
 
 export function NavBar() {
-  const { changePage } = useContext(PageContext);
+  const { changePage, logOut } = useContext(PageContext);
   const navigate = useNavigate();
 
   return (
@@ -15,9 +15,12 @@ export function NavBar() {
       >
         Informacion
       </button>
-      <button onClick={() => {
-        navigate('/');
-      }}>
+      <button
+        onClick={() => {
+          logOut();
+          navigate('/');
+        }}
+      >
         Cerrar sesion
       </button>
     </nav>

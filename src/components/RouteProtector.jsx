@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 export function RouteProtector({ children, role }) {
   const { getRole } = useContext(AuthContext);
   const tokenRole = getRole();
-  console.log(tokenRole);
 
   if (!tokenRole) {
     alert('Primero debes iniciar sesion');
