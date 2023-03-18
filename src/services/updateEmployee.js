@@ -1,6 +1,6 @@
-import { REQUEST_URL } from "../../../lib/requestURL";
-import { employeeMapper } from "../utils/employeeMapper";
+import { REQUEST_URL } from "../lib/requestURL";
 import { employeeSendMapper } from "../utils/employeeSendMapper";
+import { employeeMapper } from "../utils/employeeMapper";
 
 export async function updateEmployee({employee, id}){
   const employeeFormatted = employeeSendMapper({employee})

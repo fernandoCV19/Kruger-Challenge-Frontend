@@ -1,0 +1,1 @@
+export const TOKEN_JWT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJyb2xlIjoiRW1wbG95ZWUifQ.BlrzREfPVBJfUIJj7NIglkZfHdso-x7R3453wFVacrc';

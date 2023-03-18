@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { getEmployee } from '../services/getEmployee';
-import { updateEmployee } from '../services/updateEmployee';
 import { verifyCI } from '../services/verifyCI';
 import { getEditableFields } from '../utils/getEditableFields';
 import { getStaticFields } from '../utils/getStaticFields';
+import { updateEmployee } from '../../../services/updateEmployee';
 
 export function useFields({ id }) {
   const [editableFields, setEditableFields] = useState({

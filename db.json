@@ -1,34 +1,34 @@
 {
   "empleados": [
     {
-      "ci": "1111111112",
-      "nombres": "Cecilia Amade",
-      "apellidos": "Patroklos Milkov",
-      "correo": "ravard0@mail.co",
-      "fechaNacimiento": "5/27/1961",
+      "ci": "8522523897",
+      "nombres": "Troilos Cecilia",
+      "apellidos": "Lazar Patroklos",
+      "correo": "ravard0@globo.com",
+      "fechaNacimiento": "1961-05-22",
       "direccion": "6570 Katie Pass",
       "telefono": "(456) 6828520",
       "vacuna": {
-        "tipo": "Sputnik",
-        "fecha": "2022-01-19T04:00:00.000Z",
-        "numeroDosis": 2
+        "tipo": "Jhonson&Jhonson",
+        "fecha": "2023-02-28T00:00:00.000Z",
+        "numeroDosis": "5"
       },
       "id": 1
     },
     {
-      "ci": "1222222222",
-      "nombres": "Rajesh Reino Pablo",
-      "apellidos": "Fritjof Ali Perez",
-      "correo": "ckerton1@webnode.com",
+      "id": 2,
+      "ci": "3711844897",
+      "nombres": "Rajesh Reino",
+      "apellidos": "Fritjof Ali",
+      "correo": "fcockerton1@webnode.com",
       "fechaNacimiento": "3/9/1958",
       "direccion": "418 Mendota Drive",
       "telefono": "(486) 9413585",
       "vacuna": {
         "tipo": "AstraZeneca",
-        "fecha": "2022-05-03T04:00:00.000Z",
+        "fecha": "2022-5-3",
         "numeroDosis": 3
-      },
-      "id": 2
+      }
     },
     {
       "id": 3,
