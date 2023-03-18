@@ -1,7 +1,7 @@
-import { useState, useEffect, useContext } from "react";
-import { AuthContext } from "../../../context/AuthContext";
-import { getInfo } from "../services/getInfo";
-import { updateEmployee } from "../../../services/updateEmployee";
+import { useState, useEffect, useContext } from 'react';
+import { AuthContext } from '../../../context/AuthContext';
+import { getInfo } from '../services/getInfo';
+import { updateEmployee } from '../../../services/updateEmployee';
 
 /**
  * Hook that stores the fields available in the view and edit information section available to the employee. It also gives the functions to modify that values.
@@ -84,7 +84,7 @@ export function useEmployeeInfo() {
       setIsVaccinated(!!data.vaccine);
     });
 
-    alert('Los datos han sido actualizados')
+    alert('Los datos han sido actualizados');
   };
 
   return { fields, isVaccinated, handlerIsVaccinated, updateInformation };
